@@ -93,18 +93,18 @@
 
 
 
-<meta name="description" content="今天突然发现在Mac的Safari中在http下video就不能自动播放，报错 1Unhandled Promise Rejection: NotAllowedError (DOM Exception 35): The request is not allowed by the user agent or the platform in the current context, possibly">
+<meta name="description" content="之前翻墙在家用的是蓝灯，公司用的公司的代理。蓝灯不想吐槽了，于是乎询问了后段小哥哥自己去买了个服务器，这个服务器必须是国外的。这里我用的是vultrhttps://www.vultr.com/?ref=7449683,使用我这个分享的链接进行注册你和我都可以得10美元哦！我当时看的这篇博客https://darrenliuwei.coding.me/fuck-gfw/ssr.html这个教程写的很">
 <meta name="keywords" content="js">
 <meta property="og:type" content="article">
-<meta property="og:title" content="video的坑">
-<meta property="og:url" content="http://yoursite.com/2017/12/12/Safari中video踩过的坑/index.html">
+<meta property="og:title" content="自己搭建VPN翻墙">
+<meta property="og:url" content="http://yoursite.com/2018/06/12/自己搭建vpn翻墙/index.html">
 <meta property="og:site_name" content="Michelle">
-<meta property="og:description" content="今天突然发现在Mac的Safari中在http下video就不能自动播放，报错 1Unhandled Promise Rejection: NotAllowedError (DOM Exception 35): The request is not allowed by the user agent or the platform in the current context, possibly">
+<meta property="og:description" content="之前翻墙在家用的是蓝灯，公司用的公司的代理。蓝灯不想吐槽了，于是乎询问了后段小哥哥自己去买了个服务器，这个服务器必须是国外的。这里我用的是vultrhttps://www.vultr.com/?ref=7449683,使用我这个分享的链接进行注册你和我都可以得10美元哦！我当时看的这篇博客https://darrenliuwei.coding.me/fuck-gfw/ssr.html这个教程写的很">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-15T11:08:31.000Z">
+<meta property="og:updated_time" content="2018-06-12T07:56:53.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="video的坑">
-<meta name="twitter:description" content="今天突然发现在Mac的Safari中在http下video就不能自动播放，报错 1Unhandled Promise Rejection: NotAllowedError (DOM Exception 35): The request is not allowed by the user agent or the platform in the current context, possibly">
+<meta name="twitter:title" content="自己搭建VPN翻墙">
+<meta name="twitter:description" content="之前翻墙在家用的是蓝灯，公司用的公司的代理。蓝灯不想吐槽了，于是乎询问了后段小哥哥自己去买了个服务器，这个服务器必须是国外的。这里我用的是vultrhttps://www.vultr.com/?ref=7449683,使用我这个分享的链接进行注册你和我都可以得10美元哦！我当时看的这篇博客https://darrenliuwei.coding.me/fuck-gfw/ssr.html这个教程写的很">
 
 
 
@@ -132,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/12/Safari中video踩过的坑/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/12/自己搭建vpn翻墙/"/>
 
 
 
 
 
-  <title>video的坑 | Michelle</title>
+  <title>自己搭建VPN翻墙 | Michelle</title>
   
 
 
@@ -277,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/12/Safari中video踩过的坑/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/12/自己搭建vpn翻墙/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="毛毛">
@@ -294,7 +294,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">video的坑</h1>
+          <h1 class="post-title" itemprop="name headline">自己搭建VPN翻墙</h1>
         
 
         <div class="post-meta">
@@ -306,8 +306,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-12T15:52:40+08:00">
-                2017-12-12
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-12T15:30:23+08:00">
+                2018-06-12
               </time>
             
 
@@ -363,47 +363,10 @@
       
 
       
-        <p>今天突然发现在Mac的Safari中在http下video就不能自动播放，报错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Unhandled Promise Rejection: NotAllowedError (DOM Exception 35): The request is not allowed by the user agent or the platform in the current context, possibly because the user denied permission.</div></pre></td></tr></table></figure>
-<p>一个令人费解的错误，但是在本地能够播放，经过百度之后是新版的Safari禁止了video和audio的自动播放，必须用户手动触发才能进行播放，就和在移动端一样，但是可以通过给video添加一个muted的属性让他自动播放。</p>
-<p>还有一个在Safari中的坑就是当你使用rotate旋转的时候，盒子的z-index会不起作用，这个时候可以给他添加transform：translateZ(100)如果不够就给大一点，直到达到你想要的效果即可，还有个方法就是在外层添加overflow：hidden也是可以的。</p>
-<p>当然我不是用这两个方法解决的，我直接就丢弃了制造bug的源头，没有用rotate而是使用scale来代替我想要的旋转的效果，这下就不担心层级的问题，或者外层的问题了。如果你的要旋转的物体是左右对称的就可以采用scale来代替rotate，是一样的效果,代码如下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">@keyframes rotate&#123;</div><div class="line">    0% &#123;</div><div class="line">        transform:scale(1,1);</div><div class="line">    &#125;</div><div class="line">    50% &#123;</div><div class="line">        transform:scale(0,1);</div><div class="line">    &#125;</div><div class="line">    100% &#123;</div><div class="line">        transform:scale(1,1);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>video在移动端是最令我头疼的，特别是在iOS手机中，当然有video.js你可以用这个插件，但是在移动端多引入一个js未免显得很多余。</p>
-<p>在iOS手机中的QQ浏览器video会有一个小窗口，没有办法控制，比如这种我已经关闭了视频弹窗但是视频仍然在那里必须全屏一下再退出才能关掉这个小窗口。其实这个很好解决就是video全屏就解决这个问题了。</p>
-<p>比如你的代码结构是这样的</p>
-<pre><code class="bash">&lt;div class=<span class="string">"pop pop_video"</span>&gt;
-  &lt;div class=<span class="string">"pop_close"</span>&gt;&lt;/div&gt;
-  &lt;video class=<span class="string">"video"</span> controls=<span class="string">""</span>&gt;
-    &lt;<span class="built_in">source</span> src=<span class="string">"/videos/Sdorica_2.mp4"</span> <span class="built_in">type</span>=<span class="string">"video/mp4"</span>&gt;
-    您的浏览器不支持 video 标签。
-  &lt;/video&gt;
-&lt;/div&gt;
-</code></pre>
-<p>样式这么写就可以了</p>
-<pre><code class="bash">.pop{
-      position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    min-height: 100vh;
-    overflow: auto;
-    text-align: center;
-    background: rgba(0,0,0,.8);
-    z-index: 99;
-}
-.pop_video video {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    -o-transform: translate(-50%,-50%);
-    transform: translate(-50%,-50%);
-}
-</code></pre>
-<p>这样子就完全避免的那个小窗口的尴尬问题，点进去播放直接就是小窗口放大的效果。</p>
+        <p>之前翻墙在家用的是蓝灯，公司用的公司的代理。蓝灯不想吐槽了，于是乎询问了后段小哥哥自己去买了个服务器，这个服务器必须是国外的。这里我用的是vultr<a href="https://www.vultr.com/?ref=7449683" target="_blank" rel="external">https://www.vultr.com/?ref=7449683</a>,使用我这个分享的链接进行注册你和我都可以得10美元哦！我当时看的这篇博客<a href="https://darrenliuwei.coding.me/fuck-gfw/ssr.html" target="_blank" rel="external">https://darrenliuwei.coding.me/fuck-gfw/ssr.html</a>这个教程写的很详细还有视频的介绍。我这里记录下我的搭建过程以及遇见过的坑。</p>
+<p>第一个坑：<br>当你创建好你的服务器之后记得ping一下那个IP地址能不能ping的通。在ping ip的时候你如果链接的是Wi-Fi注意如果是共享软件分享的Wi-Fi是ping不通的，我就是连的360随身Wi-Fi所以我一直ping不通，连baidu.com都ping不通，你只要不是连的共享设备的Wi-Fi一般能ping的通的。</p>
+<p>第二个坑：<br>我按着那篇博客搭建ssr翻墙每一步都成功，但是最后配置好之后还是翻不出去，最后一步写的重启服务器，这个服务器不是你买的vps服务器哈，我就是重启的这个，怎么都连不上，最后发现重启的是你安装的那个ssr的服务器，重启的操作是运行bash ssr.sh 进入管理界面选择数字12进行重启，这个时候再去配置你安装的ssr客户端，链接即可正常上网。</p>
+<p>使用自己搭建的非常方便，自己进行管理，你可以选择最便宜的套餐2.5美元一个月pc端移动端都可以使用，比一些付费的VPN好用多了免费的更不提了。我的是iOS的我的移动端下载的是superwingy，app store里面下载3元。很好用配置就是和pc端的配置一样照着填就好了。</p>
 
       
     </div>
@@ -446,8 +409,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/27/西岭雪山/" rel="next" title="大邑两日游">
-                <i class="fa fa-chevron-left"></i> 大邑两日游
+              <a href="/2018/04/26/express连接数据库/" rel="next" title="express连接mysql数据库">
+                <i class="fa fa-chevron-left"></i> express连接mysql数据库
               </a>
             
           </div>
@@ -455,10 +418,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/13/axios初使用/" rel="prev" title="axios初使用">
-                axios初使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -522,7 +481,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
